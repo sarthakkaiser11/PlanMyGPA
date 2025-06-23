@@ -36,3 +36,25 @@
     color: white;
   }
   
+   /* ---------- Main Layout ---------- */
+   .main-grid {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  /* ---------- Card Styles ---------- */
+  .card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s;
+  }
+  
+  .card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #2c3e50;
+  }
