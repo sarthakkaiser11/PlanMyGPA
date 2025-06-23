@@ -1,80 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlanMyGPA</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <button id="theme-toggle" class="theme-toggle">🌙</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlanMyGPA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">PlanMyGPA</div>
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
+    </nav>
 
-  <div class="container">
-    <h1>📘 GPA Planner</h1>
+    <div class="container">
+      <h1>📘 GPA Planner</h1>
 
-    <!-- SGPA Calculator -->
-    <section>
-      <h2>🎓 SGPA Calculator</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Course</th>
-            <th>Credits</th>
-            <th>Grade</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="course-body">
-          <tr>
-            <td><input type="text" placeholder="e.g. Math" /></td>
-            <td><input type="number" class="credit-input" min="0" step="0.5" /></td>
-            <td>
-              <select class="grade-select">
-                <option value="">--Grade--</option>
-                <option value="10">A</option>
-                <option value="9">A-</option>
-                <option value="8">B</option>
-                <option value="7">B-</option>
-                <option value="5">C</option>
-                <option value="2">E</option>
-              </select>
-            </td>
-            <td><button class="delete-row">❌</button></td>
-          </tr>
-        </tbody>
-      </table>
-      <button id="add-row">+ Add Course</button>
-      <button id="calculate-sgpa">Calculate SGPA</button>
-      <div id="sgpa-result" class="result"></div>
-    </section>
+      <!-- SGPA Calculator -->
+      <section>
+        <h2>🎓 SGPA Calculator</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Credits</th>
+              <th>Grade</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="course-body">
+            <tr>
+              <td><input type="text" placeholder="e.g. Math" /></td>
+              <td>
+                <input type="number" class="credit-input" min="0" step="0.5" />
+              </td>
+              <td>
+                <select class="grade-select">
+                  <option value="">--Grade--</option>
+                  <option value="10">A</option>
+                  <option value="9">A-</option>
+                  <option value="8">B</option>
+                  <option value="7">B-</option>
+                  <option value="5">C</option>
+                  <option value="2">E</option>
+                </select>
+              </td>
+              <td><button class="delete-row">❌</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <button id="add-row">+ Add Course</button>
+        <button id="calculate-sgpa">Calculate SGPA</button>
+        <div id="sgpa-result" class="result"></div>
+      </section>
 
-    <hr />
+      <hr />
 
-    <!-- CGPA Target Planner -->
-    <section>
-      <h2>🎯 CGPA Target Planner</h2>
-      <input type="number" id="planner-current-cgpa" placeholder="Current CGPA" step="0.01" />
-      <input type="number" id="current-total-credits" placeholder="Total Credits Till Now" />
-      <input type="number" id="target-cgpa" placeholder="Target CGPA" step="0.01" />
-      <input type="number" id="next-sem-credits" placeholder="Next Semester Credits" />
-      <button id="calculate-target-sgpa">Get Required SGPA</button>
-      <div id="target-sgpa-result" class="result"></div>
-    </section>
+      <!-- CGPA Target Planner -->
+      <section>
+        <h2>🎯 CGPA Target Planner</h2>
+        <input
+          type="number"
+          id="planner-current-cgpa"
+          placeholder="Current CGPA"
+          step="0.01"
+        />
+        <input
+          type="number"
+          id="current-total-credits"
+          placeholder="Total Credits Till Now"
+        />
+        <input
+          type="number"
+          id="target-cgpa"
+          placeholder="Target CGPA"
+          step="0.01"
+        />
+        <input
+          type="number"
+          id="next-sem-credits"
+          placeholder="Next Semester Credits"
+        />
+        <button id="calculate-target-sgpa">Get Required SGPA</button>
+        <div id="target-sgpa-result" class="result"></div>
+      </section>
 
-    <hr />
+      <hr />
 
-    <!-- SGPA Planner -->
-    <section>
-      <h2>🔄 SGPA Planner</h2>
-      <input type="number" id="rev-current-cgpa" placeholder="Current CGPA" step="0.01" />
-      <input type="number" id="rev-current-total-credits" placeholder="Current Credits" />
-      <input type="number" id="rev-expected-sgpa" placeholder="Expected SGPA" step="0.01" />
-      <input type="number" id="rev-next-sem-credits" placeholder="Next Semester Credits" />
-      <button id="calculate-reverse-cgpa">Predict New CGPA</button>
-      <div id="reverse-cgpa-result" class="result"></div>
-    </section>
-  </div>
+      <!-- SGPA Planner -->
+      <section>
+        <h2>🔄 SGPA Planner</h2>
+        <input
+          type="number"
+          id="rev-current-cgpa"
+          placeholder="Current CGPA"
+          step="0.01"
+        />
+        <input
+          type="number"
+          id="rev-current-total-credits"
+          placeholder="Current Credits"
+        />
+        <input
+          type="number"
+          id="rev-expected-sgpa"
+          placeholder="Expected SGPA"
+          step="0.01"
+        />
+        <input
+          type="number"
+          id="rev-next-sem-credits"
+          placeholder="Next Semester Credits"
+        />
+        <button id="calculate-reverse-cgpa">Predict New CGPA</button>
+        <div id="reverse-cgpa-result" class="result"></div>
+      </section>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
