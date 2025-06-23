@@ -1,14 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlanMyGPA</title>
-  </head>
-  <body>
-    <div class="container">
-      <button id="theme-toggle" class="theme-toggle">🌙</button>
-      <h1>GPA Calculator</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlanMyGPA | GPA & CGPA Calculator</title>
+  <meta name="description" content="Smart SGPA & CGPA calculator with future planning tools to track and forecast your academic progress." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>📘 PlanMyGPA</h1>
+      <button id="theme-toggle" class="theme-toggle">🌓</button>
     </div>
-  </body>
+  </header>
+
+  <main class="main-grid">
+
+    <!-- SGPA Section -->
+    <section class="card">
+      <h2>🎓 SGPA Calculator</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Credits</th>
+              <th>Grade</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="sgpa-body">
+            <tr>
+              <td><input type="text" placeholder="e.g. Math-1" /></td>
+              <td><input type="number" class="credit" min="0" step="0.5" /></td>
+              <td>
+                <select class="grade">
+                  <option value="">Select</option>
+                  <option value="10">A</option>
+                  <option value="9">A-</option>
+                  <option value="8">B</option>
+                  <option value="7">B-</option>
+                  <option value="5">C</option>
+                  <option value="2">E</option>
+                </select>
+              </td>
+              <td><button class="remove-row">❌</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="actions">
+        <button id="add-sgpa-row">+ Add Course</button>
+        <button id="calc-sgpa">Calculate SGPA</button>
+      </div>
+      <div id="sgpa-output" class="output-box"></div>
+    </section>
+
+    <!-- CGPA Section -->
+    <section class="card">
+      <h2>📘 CGPA Calculator</h2>
+      <input type="number" id="cgpa-current" placeholder="Current CGPA" />
+      <input type="number" id="cgpa-prev-credits" placeholder="Completed Credits" />
+      <input type="number" id="cgpa-new-sgpa" placeholder="New SGPA" />
+      <input type="number" id="cgpa-new-credits" placeholder="New Sem Credits" />
+      <button id="calc-cgpa">Calculate CGPA</button>
+      <div id="cgpa-output" class="output-box"></div>
+    </section>
+
+    <!-- Planner Section -->
+    <section class="card">
+      <h2>🎯 Target SGPA Planner</h2>
+      <input type="number" id="planner-current-cgpa" placeholder="Current CGPA" />
+      <input type="number" id="planner-total-credits" placeholder="Total Credits So Far" />
+      <input type="number" id="planner-target-cgpa" placeholder="Target CGPA" />
+      <input type="number" id="planner-next-credits" placeholder="Next Sem Credits" />
+      <button id="calc-planner">Required SGPA?</button>
+      <div id="planner-output" class="output-box"></div>
+    </section>
+
+    <!-- Reverse Planner Section -->
+    <section class="card">
+      <h2>🔄 SGPA to CGPA Impact</h2>
+      <input type="number" id="rev-current-cgpa" placeholder="Current CGPA" />
+      <input type="number" id="rev-current-credits" placeholder="Total Credits" />
+      <input type="number" id="rev-next-sgpa" placeholder="Expected SGPA" />
+      <input type="number" id="rev-next-credits" placeholder="Next Sem Credits" />
+      <button id="calc-rev-cgpa">New CGPA?</button>
+      <div id="rev-cgpa-output" class="output-box"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Made with ❤️ by Sarthak Maheshwari | PlanMyGPA</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
