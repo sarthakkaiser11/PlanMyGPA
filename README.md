@@ -6,6 +6,24 @@ A minimal, responsive GPA planning tool for students to calculate **SGPA**, upda
 
 ---
 
+## ❓ Why This Project Was Needed
+
+Manually calculating your GPA each semester or figuring out:
+- How much SGPA you might score,
+- How much SGPA you need to reach your **target CGPA**,
+
+...can be extremely **hectic and error-prone**. Students often waste time using calculators or Excel sheets.
+
+**PlanMyGPA** solves this problem with an intuitive, all-in-one tool that:
+- Calculates SGPA instantly,
+- Predicts your new CGPA based on expected SGPA,
+- Tells you the **exact SGPA required** to reach a target CGPA next semester.
+
+It's fast and accurate.
+
+---
+
+
 ## 🚀 Features
 
 - ✅ **SGPA Calculator**  
