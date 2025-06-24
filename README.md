@@ -40,8 +40,7 @@ A minimal, responsive GPA planning tool for students to calculate **SGPA**, upda
 
 ## 💻 Live Demo
 
-🔗 [Deploy on GitHub Pages / Netlify / Vercel](https://your-live-link-here.com)  
-*(Replace with your live link after deployment)*
+🔗 [Click here](https://plan-my-gpa.netlify.app/)  
 
 ---
 
