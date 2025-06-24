@@ -25,8 +25,7 @@ A minimal, responsive GPA planning tool for students to calculate **SGPA**, upda
 
 ## 📸 Preview
 
-![PlanMyGPA Screenshot](./images/screenshot.png)  
-*(Add screenshot image in a folder named `images/` inside your project)*
+![PlanMyGPA Screenshot](./Images/screenshot_1.jpg)  
 
 ---
 
